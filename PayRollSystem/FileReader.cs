@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PayRollSystem
+﻿namespace PayRollSystem
 {
     class FileReader
     {
+        /// <summary>
+        /// This class has method ReadFile()
+        /// ReadFile() method Reads the staffLists from Staff.txt file 
+        /// 
+        /// </summary>
+        /// <returns>List of Staff objects for each staffs in the file Staff.txt</returns>
         public List<Staff> ReadFile()
         {
             List<Staff> staffList = new List<Staff>();

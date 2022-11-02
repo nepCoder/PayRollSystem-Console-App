@@ -1,5 +1,4 @@
 ﻿using PayRollSystem;
-using System.IO;
 
 namespace PayRollSoftware
 {
