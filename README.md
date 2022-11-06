@@ -1,7 +1,7 @@
 # PayRollSystem-Console-App
 PayRollSystem Console App using C#.NET6.
 
-> **Learnig Objectives**
+> ### **Learnig Objectives**
 - Object Oriented Programming with C#
 - Class and Objects
 - Inheritance
@@ -13,7 +13,7 @@ PayRollSystem Console App using C#.NET6.
 - File Handling
 and `many more--`
 
-> **Output Samples**
+> ### **Output Samples**
 -----------------------------------
 ![1](https://user-images.githubusercontent.com/60433432/200186633-2a5bf7bc-927c-4df7-b19c-bcfd4208dc4c.PNG)
 -----------------------------------
