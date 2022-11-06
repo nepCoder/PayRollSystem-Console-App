@@ -5,7 +5,7 @@
         /// <summary>
         /// This class has method ReadFile()
         /// ReadFile() method Reads the staffLists from Staff.txt file 
-        /// 
+        /// The file must be created manually in bin folder of the project
         /// </summary>
         /// <returns>List of Staff objects for each staffs in the file Staff.txt</returns>
         public List<Staff> ReadFile()

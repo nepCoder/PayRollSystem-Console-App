@@ -2,20 +2,27 @@
 {
     class PaySlip
     {
-        //fields
+        #region private fields
         private int month, year;
+        #endregion
 
-        //enum
+        #region enum
+        /// <summary>
+        /// Qn. Why properties are not defined here?
+        /// Qn. Why is enum required here?
+        /// </summary>
         enum monthsOfYear { NONE, JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC };
+        #endregion
 
-        //constructor
+        #region constructor
         public PaySlip(int payMonth, int payYear)
         {
             month = payMonth;
             year = payYear;
         }
+        #endregion
 
-        //methods
+        #region methods
         public void GeneratePaySlip(List<Staff> staffList)
         {
             string path;
@@ -59,7 +66,10 @@
         }
 
 
-        //method to generate summary of employees who worked less than 10 hours in this month.
+        /// <summary>
+        /// generates summary of employees who worked less than 10 hours in this month.
+        /// </summary>
+        /// <param name="staffList"></param>
         public void GenerateSummary(List<Staff> staffList)
         {
             var query =
@@ -81,7 +91,10 @@
             };
         }
 
-
+        /// <summary>
+        /// Display Details in String
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -90,5 +103,7 @@
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             return " ";
         }
+
+        #endregion
     }
 }

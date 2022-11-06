@@ -3,11 +3,12 @@
     public class Staff
     {
 
-        //Fields
+        #region Private Fields
         private float hourlyRate;
         private int hWorked;
+        #endregion
 
-        //Properties
+        #region Properties
         public float TotalPay { get; protected set; } //auto-implemented property
         public float BasicPay { get; private set; } //auto-implemented property
         public string NameOfStaff { get; private set; } //auto-implemented property
@@ -27,15 +28,17 @@
                 else hWorked = 0;
             }
         }
+        #endregion
 
-        //Constructor
+        #region Constructor
         public Staff(string name, float rate)
         {
             NameOfStaff = name;   //value set to property
             hourlyRate = rate;      //value set to field
         }
+        #endregion
 
-        //Methods
+        #region Methods
         public virtual void CalculatePay()
         {
             Console.WriteLine("\nCalculating Payment...");
@@ -55,6 +58,6 @@
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~");
             return " ";
         }
-
+        #endregion
     }
 }

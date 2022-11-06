@@ -2,18 +2,22 @@
 {
     class Manager : Staff
     {
-        //fields
+        #region private fields
         private const float managerHourlyRate = 50;
+        #endregion
 
-        //properties
+        #region properties
         public int Allowance { get; private set; }
+        #endregion
 
-        //constructor
+        #region constructor
         public Manager(string name) : base(name, managerHourlyRate) //pass the value name and managerHourlyRate to its base constructor
         {
 
         }
-        //methods
+        #endregion
+
+        #region methods
         public override void CalculatePay()
         {
             base.CalculatePay();
@@ -36,5 +40,6 @@
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~");
             return " ";
         }
+        #endregion
     }
 }

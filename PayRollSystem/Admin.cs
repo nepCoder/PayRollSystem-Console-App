@@ -2,20 +2,23 @@
 {
     class Admin : Staff
     {
-        //fields
+        #region private fields
         private const float overTimeRate = 15.5F;
         private const float adminHourlyRate = 30;
+        #endregion
 
-        //property
+        #region property
         public float OverTime { get; private set; }
+        #endregion
 
-        //constructor
+        #region constructor
         public Admin(string name) : base(name, adminHourlyRate)
         {
 
         }
+        #endregion
 
-        //methods
+        #region methods
         public override void CalculatePay()
         {
             Console.WriteLine("\nCalculating Payment...");
@@ -39,7 +42,7 @@
             Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~");
             return " ";
         }
-
+        #endregion
 
     }
 }

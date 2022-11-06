@@ -6,12 +6,14 @@ namespace PayRollSoftware
     {
         public static void Main()
         {
+            #region initialization of objects and variables
             List<Staff> myStaff = new List<Staff>(); //variable to store list of staff objects
             FileReader fr = new FileReader(); //instance of FileReader class
             int month = 0;
             int year = 0;
+            #endregion
 
-            //Enter value for year
+            #region Enter value for year
             while (year == 0)
             {
                 Console.Write("\nEnter year : ");
@@ -25,8 +27,9 @@ namespace PayRollSoftware
                     Console.WriteLine("Conversion Unsuccessful");
                 }
             }
+            #endregion
 
-            //Enter value for month
+            #region Enter value for month
             while (month == 0)
             {
                 Console.Write("\nEnter Month : ");
@@ -46,12 +49,14 @@ namespace PayRollSoftware
                     Console.WriteLine("Conversion Unsuccessful");
                 }
             }
+            #endregion
 
-            //Add items in the list myStaff
+            #region Add items in the list myStaff
             myStaff = fr.ReadFile();
+            #endregion
 
-            //CalculatePay for all staffs in myStaff and run ToString to show the detail
-            foreach(var staff in myStaff)
+            #region CalculatePay for all staffs in myStaff and run ToString to show the detail
+            foreach (var staff in myStaff)
             {
                 //take HoursWorked from user
                 bool isValid = false;
@@ -77,13 +82,14 @@ namespace PayRollSoftware
                 //Call ToString Method for each staff
                 staff.ToString();
             }
+            #endregion
 
-
-            //Generate PaySlip and PaySummary
+            #region Generate PaySlip and PaySummary
             PaySlip ps = new PaySlip(month, year);
             ps.GeneratePaySlip(myStaff);
             ps.GenerateSummary(myStaff);
             ps.ToString();
+            #endregion
 
             Console.ReadKey();
 
